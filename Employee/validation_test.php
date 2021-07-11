@@ -1,7 +1,7 @@
 <?php
 include 'validation.php';
 
-$stringValue = "hgfgygfghh";
-echo check_strings($stringValue);
+$stringValue = "111111111";
+echo phone_length($stringValue);
 
 ?>

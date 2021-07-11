@@ -12,6 +12,13 @@ function check_strings($stringValue) {
 
 
 function phone_length($stringValue){
+  if(strlen($stringValue)==10){
+    
+      return "false";
+  }
+ 
+  return "true";
+  
 
 }
 
