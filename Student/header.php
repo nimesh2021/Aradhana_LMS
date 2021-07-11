@@ -98,7 +98,7 @@ if(empty($_SESSION['sid'])){
     	<div class="sidebar-wrapper">
             <div class="logo">
                 <a href="index.php" class="simple-text">
-                  <img src="assets/img/logo1.png" width="20%">
+                  <img src="assets/img/logo1.png" width="45%">
                 </a>
             </div>
 
