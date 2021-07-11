@@ -119,6 +119,12 @@ if(empty($_SESSION['sid'])){
                         <p>View Shedule</p>
                     </a>
                 </li>
+                <li>
+                    <a href="results.php">
+                        <i class="pe-7s-study"></i>
+                        <p>Results</p>
+                    </a>
+                </li>
                                
              
             </ul>
@@ -139,12 +145,7 @@ if(empty($_SESSION['sid'])){
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
-                        <li>
-                            <a href="index.php" class="dropdown-toggle" data-toggle="dropdown">
-                                
-								<p class="hidden-lg hidden-md">Dashboard</p>
-                            </a>
-                        </li>
+                        
                         
                         
                     </ul>

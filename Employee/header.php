@@ -47,17 +47,15 @@ if(empty($_SESSION['aid'])){
     <meta name="viewport" content="width=device-width" />
 
 
-    <!-- Bootstrap core CSS     -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Animation library for notifications   -->
+   
     <link href="assets/css/animate.min.css" rel="stylesheet"/>
 
-    <!--  Light Bootstrap Table core CSS    -->
     <link href="assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet"/>
 
-
-    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+    
     <link href="assets/css/demo.css" rel="stylesheet" />
 
 
@@ -166,6 +164,12 @@ if(empty($_SESSION['aid'])){
                         <p>View Shedule</p>
                     </a>
                 </li>
+                <li>
+                    <a href="results.php">
+                        <i class="pe-7s-study"></i>
+                        <p>Results</p>
+                    </a>
+                </li>
                 <?php
                 if($_SESSION['role']=="Admin"){
                 ?>
@@ -206,10 +210,7 @@ if(empty($_SESSION['aid'])){
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
                         <li>
-                            <a href="index.php" class="dropdown-toggle" data-toggle="dropdown">
-                                
-								<p class="hidden-lg hidden-md">Dashboard</p>
-                            </a>
+                            
                         </li>
                         
                         

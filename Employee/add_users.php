@@ -138,6 +138,7 @@ include 'validation.php';
                    
                    <?php
                    $password = 12345678;
+                   $exam = "Not Attempted";
                    if(isset($_POST["submit1"])){
                        $f_name = check_strings($_POST["fname"]);
                        $l_name = check_strings($_POST["lname"]);
@@ -180,7 +181,7 @@ include 'validation.php';
                         <?php
 
                     }else{
-                        if (!mysqli_query($link,"INSERT into student (fname,lname,dob,gender,email,tp,address,nic,package,group1,password) values('$_POST[fname]','$_POST[lname]','$_POST[dob1]','$_POST[gender]','$_POST[email]','$_POST[phone]','$_POST[address1]','$_POST[nic]','$_POST[package]','$_POST[group1]','$password')")){
+                        if (!mysqli_query($link,"INSERT into student (fname,lname,dob,gender,email,tp,address,nic,package,group1,password,exam) values('$_POST[fname]','$_POST[lname]','$_POST[dob1]','$_POST[gender]','$_POST[email]','$_POST[phone]','$_POST[address1]','$_POST[nic]','$_POST[package]','$_POST[group1]','$password','$exam')")){
                             mysqli_error($link);
                         }
                         ?>
