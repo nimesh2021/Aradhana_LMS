@@ -1,7 +1,7 @@
 <?php
 include 'validation.php';
 
-$stringValue = "111111111";
-echo phone_length($stringValue);
+$stringValue = "1111111111111";
+echo check_nic($stringValue);
 
 ?>

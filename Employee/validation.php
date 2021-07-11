@@ -14,10 +14,21 @@ function check_strings($stringValue) {
 function phone_length($stringValue){
   if(strlen($stringValue)==10){
     
-      return "false";
+      return false;
   }
  
-  return "true";
+  return true;
+  
+
+}
+
+function check_nic($stringValue){
+  if(strlen($stringValue)==10 || strlen($stringValue)==12){
+    
+      return false;
+  }
+ 
+  return true;
   
 
 }

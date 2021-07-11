@@ -1,6 +1,7 @@
 <?php
 include 'header.php';
 include 'connection.php';
+include 'validation.php';
 ?>
 <title>LMS|Add Student</title>
 
@@ -11,7 +12,9 @@ include 'connection.php';
                     <div class="col-md-6">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Add a new Student</h4>
+                                
+                            <center> <h4 id = "errMsg" class="title" style="color:red;"></h4></center>
+                               <h4 class="title">Add a new Student</h4> 
                             </div>
                             <div class="content">
                                 <form method="POST" id = "form1" name="form1">
@@ -136,19 +139,59 @@ include 'connection.php';
                    <?php
                    $password = 12345678;
                    if(isset($_POST["submit1"])){
+                       $f_name = check_strings($_POST["fname"]);
+                       $l_name = check_strings($_POST["lname"]);
+                       $phone_size = phone_length($_POST["phone"]);
+                       $nic_size = check_nic($_POST["nic"]);
 
-                    if (!mysqli_query($link,"INSERT into student (fname,lname,dob,gender,email,tp,address,nic,package,group1,password) values('$_POST[fname]','$_POST[lname]','$_POST[dob1]','$_POST[gender]','$_POST[email]','$_POST[phone]','$_POST[address1]','$_POST[nic]','$_POST[package]','$_POST[group1]','$password')")){
-                        mysqli_error($link);
+                    if($f_name){
+                        ?>
+                        <script>
+                            document.getElementById("errMsg").innerHTML= "Wrong Name!!";
+                            
+                            </script>
+                        <?php
+
+                    }elseif($l_name){
+
+                        ?>
+                        <script>
+                            document.getElementById("errMsg").innerHTML= "Wrong Last Name!!";
+                            
+                            </script>
+                        <?php
+
+                    }elseif($phone_size){
+
+                        ?>
+                         <script>
+                            document.getElementById("errMsg").innerHTML= "Wrong Phone Number!!";
+                            
+                            </script>
+                        <?php
+
+                    }elseif($nic_size){
+
+                        ?>
+                         <script>
+                            document.getElementById("errMsg").innerHTML= "Wrong NIC Number!!";
+                            
+                            </script>
+                        <?php
+
+                    }else{
+                        if (!mysqli_query($link,"INSERT into student (fname,lname,dob,gender,email,tp,address,nic,package,group1,password) values('$_POST[fname]','$_POST[lname]','$_POST[dob1]','$_POST[gender]','$_POST[email]','$_POST[phone]','$_POST[address1]','$_POST[nic]','$_POST[package]','$_POST[group1]','$password')")){
+                            mysqli_error($link);
+                        }
+                        ?>
+                        <script>
+                            alert("User Added!");
+                        </script>
+
+                        <?php
                     }
 
-                    ?>
-
-                    <script>
-                    alert("Student Added!!");
-                     </script>
-
-
-                    <?php
+                    
                        
 
 
