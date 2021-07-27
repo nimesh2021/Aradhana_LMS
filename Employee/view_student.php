@@ -55,9 +55,13 @@ $res=mysqli_query($link,"SELECT * FROM student");
                                         ?>
                                     </tbody>
                                 </table>
+                                
+                                
 
                             </div>
+                            
                         </div>
+                        <button class="btn btn-info btn-fill" onclick="window.location='add_users.php'">Add a new Student</button>
                     </div>
 
 

@@ -56,6 +56,7 @@ $res=mysqli_query($link,"SELECT * FROM employee  WHERE role ='Advisor'");
 
                             </div>
                         </div>
+                        <button class="btn btn-info btn-fill" onclick="window.location='add_advisor.php'">Add a new Advisor</button>
                     </div>
 
 

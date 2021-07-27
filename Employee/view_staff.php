@@ -2,9 +2,9 @@
 include 'header.php';
 include 'connection.php';
 
-$res=mysqli_query($link,"SELECT * FROM employee WHERE role ='Admin'");
+$res=mysqli_query($link,"SELECT * FROM employee WHERE role ='User'");
 ?>
-<title>View admin</title>
+<title>View Users</title>
 
 
 <div class="content">
@@ -13,7 +13,7 @@ $res=mysqli_query($link,"SELECT * FROM employee WHERE role ='Admin'");
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Admin</h4>
+                                <h4 class="title">Users</h4>
                                 <p class="category">All Users</p>
                             </div>
                             <div class="content table-responsive table-full-width">
@@ -57,7 +57,7 @@ $res=mysqli_query($link,"SELECT * FROM employee WHERE role ='Admin'");
 
                             </div>
                         </div>
-                        <button class="btn btn-info btn-fill" onclick="window.location='add_admin.php'">Add a new Admin</button>
+                        <button class="btn btn-info btn-fill" onclick="window.location='add_staff.php'">Add a new User</button>
                     </div>
 
 

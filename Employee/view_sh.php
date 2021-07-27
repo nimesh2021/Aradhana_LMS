@@ -1,4 +1,7 @@
 <?php
+
+
+
 include 'header.php';
 include 'connection.php';
 
@@ -94,6 +97,14 @@ WHERE a.aid=s.aid AND s.date >= '$date_today'");
                             </div>
 
                         </div>
+                        <?php
+                        if($_SESSION['role']=="Admin" || $_SESSION['role']=="User"){
+                        ?>
+                        <button class="btn btn-info btn-fill" onclick="window.location='add_sh.php'">Add a new Schedule</button>
+
+                        <?php
+                        }
+                        ?>
                     </div>
 
 

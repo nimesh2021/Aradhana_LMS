@@ -102,7 +102,7 @@ if(empty($_SESSION['aid'])){
 
             <ul class="nav">
             <?php
-                if($_SESSION['role']=="Admin"){
+                if($_SESSION['role']=="Admin" || $_SESSION['role']=="User"){
                 ?>
                 <li>
                     <a href="index.html" target="_self">
@@ -122,46 +122,34 @@ if(empty($_SESSION['aid'])){
                 </li>
 
                 <?php
-                if($_SESSION['role']=="Admin"){
+                if($_SESSION['role']=="Admin" || $_SESSION['role']=="User"){
                 ?>
                 
                 <li>
-                    <a href="add_users.php">
-                        <i class="pe-7s-add-user"></i>
-                        <p>Add Student</p>
-                    </a>
-                </li>
-                <li>
                     <a href="view_student.php">
                         <i class="pe-7s-users"></i>
-                        <p>View Student</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="add advisor.php">
-                        <i class="pe-7s-add-user"></i>
-                        <p>Add Advisor</p>
+                        <p>Students</p>
                     </a>
                 </li>
                 <li>
                     <a href="view_advisor.php">
                         <i class="pe-7s-car"></i>
-                        <p>View Advisor</p>
+                        <p>AdvisorS</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="view_staff.php">
+                        <i class="pe-7s-add-user"></i>
+                        <p>Users</p>
                     </a>
                 </li>
                 <?php
                 }
                 ?>
                 <li>
-                    <a href="add_sh.php">
-                        <i class="pe-7s-note2"></i>
-                        <p>Add Shedule</p>
-                    </a>
-                </li>
-                <li>
                     <a href="view_sh.php">
                         <i class="pe-7s-date"></i>
-                        <p>View Shedule</p>
+                        <p> Schedules</p>
                     </a>
                 </li>
                 <li>
@@ -173,17 +161,12 @@ if(empty($_SESSION['aid'])){
                 <?php
                 if($_SESSION['role']=="Admin"){
                 ?>
-                <li>
-                    <a href="add admin.php">
-                        <i class="pe-7s-add-user"></i>
-                        <p>Add admin</p>
-                    </a>
-                </li>
+               
             
                 <li>
                     <a href="view_admin.php">
                         <i class="pe-7s-id"></i>
-                        <p>View admin</p>
+                        <p>Admins</p>
                     </a>
                 </li>
                 <?php
@@ -219,6 +202,9 @@ if(empty($_SESSION['aid'])){
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                         <a href="my_account.php">
+                            <?php
+                            echo $_SESSION['fname']." ".$_SESSION['lname'];
+                            ?>
                                 <i class="fa fa-user"></i>
 								<p class="hidden-lg hidden-md">My Account</p>
                             </a>
