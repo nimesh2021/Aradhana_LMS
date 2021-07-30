@@ -105,7 +105,7 @@ if(empty($_SESSION['aid'])){
                 if($_SESSION['role']=="Admin" || $_SESSION['role']=="User"){
                 ?>
                 <li>
-                    <a href="index.html" target="_self">
+                    <a href="index.php" target="_self">
                         <i class="pe-7s-culture"></i>
                         <p>HOME</p>
                     </a>

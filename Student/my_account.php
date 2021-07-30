@@ -21,20 +21,20 @@ $row=mysqli_fetch_array($res);
                                     <div class="row">
                                         <div class="col-md-5">
                                             <div class="form-group">
-                                                <label>Company</label>
-                                                <input type="text" class="form-control" disabled placeholder="Company" value="Aradhana Driving School">
+                                                <label>NIC</label>
+                                                <input type="text" class="form-control" placeholder="nic" name="nic"  value=<?php echo $row["nic"];?> >
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <label>Role</label>
-                                                <input type="text" class="form-control" placeholder="Username" name="email"  value="Student"  disabled>
+                                                <label>Phone</label>
+                                                <input type="text" class="form-control" placeholder="phone" name="phone" value=<?php echo $row["tp"];?> required>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Email address</label>
-                                                <input type="email" class="form-control" name="email" value=<?php echo $row["email"];?> placeholder="Email" disabled>
+                                                <input type="email" class="form-control" name="email" value=<?php echo $row["email"];?> placeholder="Email" >
                                             </div>
                                         </div>
                                     </div>
@@ -63,20 +63,7 @@ $row=mysqli_fetch_array($res);
                                         </div>
                                     </div>
 
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Phone No</label>
-                                                <input type="text" class="form-control" placeholder="phone" name="phone" value=<?php echo $row["tp"];?> required>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>NIC</label>
-                                                <input type="text" class="form-control" placeholder="nic" name="nic"  value=<?php echo $row["nic"];?> disabled>
-                                            </div>
-                                        </div>
-                                    </div>
+                                   
 
                                     
 
@@ -94,7 +81,7 @@ $row=mysqli_fetch_array($res);
                                     if(isset($_POST["submit1"])){
                                         
 
-                                        if(!mysqli_query($link," UPDATE student SET fname = '$_POST[fname]', lname = '$_POST[lname]', address = '$_POST[address]', tp = '$_POST[phone]' WHERE sid = $_SESSION[sid]"))
+                                        if(!mysqli_query($link," UPDATE student SET fname = '$_POST[fname]', lname = '$_POST[lname]', address = '$_POST[address]', tp = '$_POST[phone]', nic = '$_POST[nic]', email = '$_POST[email]'  WHERE sid = $_SESSION[sid]"))
                                     
                                     {
                                     echo("Error description: " . mysqli_error($link));

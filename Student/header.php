@@ -153,6 +153,9 @@ if(empty($_SESSION['sid'])){
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                         <a href="my_account.php">
+                        <?php
+                            echo $_SESSION['fname']." ".$_SESSION['lname'];
+                            ?>
                                 <i class="fa fa-user"></i>
 								<p class="hidden-lg hidden-md">My Account</p>
                             </a>
