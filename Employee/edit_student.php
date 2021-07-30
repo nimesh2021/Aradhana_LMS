@@ -75,8 +75,10 @@ $row=mysqli_fetch_array($res);
                                     <div class="clearfix"></div>
                                 </form></br>
                                 
-                                <a href="#"><button class="btn btn-danger btn-fill">Delete </button> </a>
-
+                                <a href="delete.php?id=<?php echo $id; ?>"><button class="btn btn-danger btn-fill">Delete </button> </a>
+                                
+                                    
+                                            
 
 
                                 <!-- SQL query -->

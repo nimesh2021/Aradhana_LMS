@@ -48,7 +48,10 @@
                   <p>You can login  here.</p>
                   <a class="btn btn-primary btn-lg" href="Student/login.php" role="button">STUDENT</a>
                   <a class="btn btn-primary btn-lg" href="Employee/login.php" role="button">EMPLOYEE</a>
+                  
                   <div class="panel-body">
+                  </br></br>
+                        <a href="./index.html">Go Back</a> </br>
     
                     
 

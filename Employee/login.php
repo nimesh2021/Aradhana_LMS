@@ -64,7 +64,8 @@ include 'connection.php';
                       
                       <div class="form-group">
                         <input name="submit1" class="btn btn-lg btn-primary btn-block" value="Log In" type="submit">
-                        <small><a href="verify.php">Forgot Password?</a></small> </br>
+                        <small><a href="verify.php">Forgot Password?</a></small> </br></br>
+                        <a href="../login.php">Go Back</a> </br>
                       </div>
                       
                       <input type="hidden" class="hide" name="token" id="token" value=""> 

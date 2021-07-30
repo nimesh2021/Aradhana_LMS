@@ -18,24 +18,23 @@ $row3 = mysqli_fetch_array($res3);
 //admins
 $res4 = mysqli_query($link,"SELECT COUNT(aid) AS count_admins FROM employee WHERE role ='Admin'");
 $row4 = mysqli_fetch_array($res4);
-
+//schedules
 $res5 = mysqli_query($link,"SELECT count(shid) as count_sh  FROM schedule");
 $row5 = mysqli_fetch_array($res5);
 
-
+//current date
 $date_today = date("Y-m-d");
 
 
 
-$res=mysqli_query($link,"SELECT s.shid AS shid,s.date AS date, s.time1 AS time1, s.group1 AS group1,a.fname AS fname, a.lname AS lname from employee a, schedule s 
-WHERE a.aid=s.aid");
 
+//upcomming schedules
 $res5=mysqli_query($link,"SELECT s.shid AS shid,s.date AS date, s.time1 AS time1, s.group1 AS group1,a.fname AS fname, a.lname AS lname from employee a, schedule s 
 WHERE a.aid=s.aid AND s.date >= '$date_today'");
 ?>
 
 
-?>
+
  
 
  <style>
@@ -156,14 +155,14 @@ WHERE a.aid=s.aid AND s.date >= '$date_today'");
                                     <tbody>
 
                                     <?php
-                                    while($row1=mysqli_fetch_array($res1))
+                                    while($row5=mysqli_fetch_array($res5))
                                      {
                                        echo "<tr>";
-                                            echo "<td>"; echo $row1["shid"]; echo "</td>";
-                                        	echo "<td>"; echo $row1["date"]; echo "</td>";
-                                        	echo "<td>"; echo $row1["time1"]; echo "</td>";
-                                        	echo "<td>"; echo $row1["group1"]; echo "</td>";
-                                            echo "<td>"; echo $row1["fname"]." ".$row1["lname"]; echo "</td>";
+                                            echo "<td>"; echo $row5["shid"]; echo "</td>";
+                                        	echo "<td>"; echo $row5["date"]; echo "</td>";
+                                        	echo "<td>"; echo $row5["time1"]; echo "</td>";
+                                        	echo "<td>"; echo $row5["group1"]; echo "</td>";
+                                            echo "<td>"; echo $row5["fname"]." ".$row5["lname"]; echo "</td>";
                                             
                                        echo "</tr>";
                                         
